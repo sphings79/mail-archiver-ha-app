@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.1 - 2026-09-08
+## 1.1.2 - 2026-09-08
 
 First release of the add-on.
 
