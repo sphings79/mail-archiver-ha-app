@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="Mail Archiver as a Home Assistant add-on">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#41BDF5"/>
+      <stop offset="1" stop-color="#7C7CF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" rx="16" fill="#0f1720"/>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <circle cx="1040" cy="90" r="180" fill="url(#accent)" opacity="0.10"/>
+    <rect x="72" y="96" width="72" height="72" rx="22" fill="url(#accent)" stroke="none"/>
+    <g stroke="#fff" stroke-width="2.2" fill="none" stroke-linejoin="round">
+      <rect x="95" y="120" width="26.0" height="19.0" rx="3.0"/>
+      <path d="M95 124.0 108.0 135.0 121.0 124.0"/>
+    </g>
+    <text x="172" y="132" fill="#e6edf3" font-size="34" font-weight="700">Mail Archiver</text>
+    <text x="172" y="162" fill="#41BDF5" font-size="20" font-weight="600">Home Assistant App (Add-on)</text>
+    <text x="72" y="224" fill="#9fb0c0" font-size="17">Runs the mail backup on Home Assistant OS itself. Appears in the sidebar</text>
+    <text x="72" y="250" fill="#9fb0c0" font-size="17">through ingress - in the browser and in the Home Assistant app.</text>
+    <rect x="72" y="288" width="214" height="42" rx="21" fill="#16202b" stroke="#28394a"/>
+    <text x="96" y="315" fill="#41BDF5" font-size="14" font-weight="600">aarch64 · amd64</text>
+    <rect x="302" y="288" width="190" height="42" rx="21" fill="#16202b" stroke="#28394a"/>
+    <text x="326" y="315" fill="#7C7CF5" font-size="14" font-weight="600">Ingress, no login</text>
+    <rect x="508" y="288" width="214" height="42" rx="21" fill="#16202b" stroke="#28394a"/>
+    <text x="532" y="315" fill="#3ddc97" font-size="14" font-weight="600">Backups included</text>
+    <g stroke="#41BDF5" stroke-width="4" fill="none" stroke-linejoin="round">
+      <path d="M1000 210 1075 140 1150 210"/>
+      <path d="M1020 200v70h110v-70"/>
+      <path d="M1050 240a30 30 0 0 1 50 0" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

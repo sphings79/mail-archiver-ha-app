@@ -1,0 +1,48 @@
+name: Mail Archiver
+version: "1.1.1"
+slug: mail_archiver
+description: Back up IMAP mailboxes to plain .eml files you own - read only, incremental, nothing deleted on the server.
+url: https://github.com/sphings79/mail-archiver-ha-app
+# The multi-arch image the Mail Archiver release workflow publishes; the
+# supervisor appends the version above as the tag.
+image: ghcr.io/sphings79/mail-archiver
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: application
+boot: auto
+# The interface appears in the sidebar. Home Assistant authenticates the user
+# before the request arrives, so the add-on runs without a login of its own.
+ingress: true
+ingress_port: 8484
+panel_icon: mdi:email-sync-outline
+panel_title: Mail Archiver
+panel_admin: true
+# Only needed to reach the interface from outside Home Assistant, which also
+# requires an interface password below.
+ports:
+  8484/tcp: null
+ports_description:
+  8484/tcp: Web interface, only with an interface password set
+map:
+  - type: share
+    read_only: false
+  - type: backup
+    read_only: false
+  - type: media
+    read_only: false
+options:
+  master_password: ""
+  ui_password: ""
+  cron: ""
+  cron_export_attachments: false
+  archive_path: /share/mail-archive
+  log_level: info
+schema:
+  master_password: password
+  ui_password: password?
+  cron: str?
+  cron_export_attachments: bool
+  archive_path: str
+  log_level: list(debug|info|warn|error)

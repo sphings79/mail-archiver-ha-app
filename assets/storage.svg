@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="Where the add-on keeps its configuration and the archive">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#41BDF5"/>
+      <stop offset="1" stop-color="#7C7CF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" rx="16" fill="#0f1720"/>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="60" y="62" fill="#e6edf3" font-size="22" font-weight="700">Where things are kept</text>
+    <text x="60" y="92" fill="#9fb0c0" font-size="15">Both survive an update of the add-on, and both are part of a Home Assistant backup.</text>
+    <rect x="60" y="136" width="520" height="200" rx="14" fill="#16202b" stroke="#28394a"/>
+    <text x="88" y="178" fill="#41BDF5" font-size="16" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">/data/config</text>
+    <text x="88" y="210" fill="#9fb0c0" font-size="13">Encrypted configuration and the index</text>
+    <text x="88" y="234" fill="#9fb0c0" font-size="13">database. Small, a few megabytes.</text>
+    <text x="88" y="274" fill="#9fb0c0" font-size="13">Managed by the supervisor,</text>
+    <text x="88" y="298" fill="#9fb0c0" font-size="13">not visible in the file editor.</text>
+    <rect x="620" y="136" width="520" height="200" rx="14" fill="#16202b" stroke="#28394a"/>
+    <text x="648" y="178" fill="#7C7CF5" font-size="16" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">/share/mail-archive</text>
+    <text x="648" y="210" fill="#9fb0c0" font-size="13">One .eml per message, in the folder</text>
+    <text x="648" y="234" fill="#9fb0c0" font-size="13">tree of the mailbox. As big as the</text>
+    <text x="648" y="258" fill="#9fb0c0" font-size="13">mailbox itself.</text>
+    <text x="648" y="298" fill="#9fb0c0" font-size="13">Readable from any other add-on.</text>
+    <rect x="60" y="366" width="1080" height="74" rx="14" fill="#1c2a1f" stroke="#2c4a33"/>
+    <text x="88" y="400" fill="#3ddc97" font-size="14" font-weight="600">Careful</text>
+    <text x="88" y="424" fill="#9fb0c0" font-size="13">Everything outside /share, /media and /backup lives inside the container and is gone with the next update.</text>
+  </g>
+</svg>

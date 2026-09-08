@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Mail Archiver itself
+    url: https://github.com/sphings79/mail-archiver/issues
+    about: Questions about the application, not about the add-on packaging

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-label="The add-on interface inside the Home Assistant sidebar">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#41BDF5"/>
+      <stop offset="1" stop-color="#7C7CF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="560" rx="16" fill="#0f1720"/>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="60" y="62" fill="#e6edf3" font-size="22" font-weight="700">In the sidebar</text>
+    <text x="60" y="92" fill="#9fb0c0" font-size="15">Ingress puts the interface inside Home Assistant, phone included.</text>
+    <rect x="60" y="130" width="260" height="380" rx="14" fill="#16202b" stroke="#28394a"/>
+    <text x="112" y="176" fill="#9fb0c0" font-size="14">Übersicht</text>
+    <circle cx="94" cy="171" r="6" fill="none" stroke="#9fb0c0" stroke-width="1.6"/>
+    <text x="112" y="228" fill="#9fb0c0" font-size="14">Energie</text>
+    <circle cx="94" cy="223" r="6" fill="none" stroke="#9fb0c0" stroke-width="1.6"/>
+    <text x="112" y="280" fill="#9fb0c0" font-size="14">Verlauf</text>
+    <circle cx="94" cy="275" r="6" fill="none" stroke="#9fb0c0" stroke-width="1.6"/>
+    <rect x="76" y="310" width="228" height="36" rx="10" fill="#1d3a4d" stroke="none"/>
+    <text x="112" y="332" fill="#41BDF5" font-size="14" font-weight="600">Mail Archiver</text>
+    <circle cx="94" cy="327" r="6" fill="none" stroke="#41BDF5" stroke-width="1.6"/>
+    <text x="112" y="384" fill="#9fb0c0" font-size="14">Entwickler</text>
+    <circle cx="94" cy="379" r="6" fill="none" stroke="#9fb0c0" stroke-width="1.6"/>
+    <text x="112" y="436" fill="#9fb0c0" font-size="14">Einstellungen</text>
+    <circle cx="94" cy="431" r="6" fill="none" stroke="#9fb0c0" stroke-width="1.6"/>
+    <rect x="344" y="130" width="796" height="380" rx="14" fill="#16202b" stroke="#28394a"/>
+    <rect x="344" y="130" width="796" height="56" rx="14" fill="#101a24" stroke="none"/>
+    <text x="372" y="165" fill="#e6edf3" font-size="16" font-weight="600">Mail Archiver</text>
+    <text x="1116" y="165" fill="#9fb0c0" font-size="13" text-anchor="end">Übersicht</text>
+    <rect x="372" y="214" width="350" height="96" rx="14" fill="#16202b" stroke="#28394a"/>
+    <text x="396" y="246" fill="#9fb0c0" font-size="10">NACHRICHTEN</text>
+    <text x="396" y="278" fill="#e6edf3" font-size="24" font-weight="600">48.213</text>
+    <rect x="746" y="214" width="366" height="96" rx="14" fill="#16202b" stroke="#28394a"/>
+    <text x="770" y="246" fill="#9fb0c0" font-size="10">ARCHIVGRÖSSE</text>
+    <text x="770" y="278" fill="#e6edf3" font-size="24" font-weight="600">1,84 GB</text>
+    <rect x="372" y="334" width="740" height="140" rx="14" fill="#16202b" stroke="#28394a"/>
+    <text x="396" y="368" fill="#e6edf3" font-size="15" font-weight="600">Status der Konten</text>
+    <text x="396" y="406" fill="#9fb0c0" font-size="13">Privat</text>
+    <text x="1088" y="406" fill="#9fb0c0" font-size="13" text-anchor="end">12.480 · 612 MB</text>
+    <text x="396" y="440" fill="#9fb0c0" font-size="13">Arbeit</text>
+    <text x="1088" y="440" fill="#9fb0c0" font-size="13" text-anchor="end">35.733 · 1,24 GB</text>
+  </g>
+</svg>

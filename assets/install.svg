@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="The four installation steps">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#41BDF5"/>
+      <stop offset="1" stop-color="#7C7CF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="340" rx="16" fill="#0f1720"/>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="60" y="62" fill="#e6edf3" font-size="22" font-weight="700">Installation</text>
+    <rect x="60" y="100" width="258" height="200" rx="14" fill="#16202b" stroke="#28394a"/>
+    <circle cx="104" cy="146" r="22" fill="url(#accent)"/>
+    <text x="104" y="153" fill="#0f1720" font-size="18" font-weight="700" text-anchor="middle">1</text>
+    <text x="84" y="206" fill="#e6edf3" font-size="17" font-weight="600">Repository</text>
+    <text x="84" y="234" fill="#9fb0c0" font-size="13">Settings, Add-ons, Add-on</text>
+    <text x="84" y="254" fill="#9fb0c0" font-size="13">store, three dots,</text>
+    <text x="84" y="274" fill="#9fb0c0" font-size="13">Repositories.</text>
+    <rect x="342" y="100" width="258" height="200" rx="14" fill="#16202b" stroke="#28394a"/>
+    <circle cx="386" cy="146" r="22" fill="url(#accent)"/>
+    <text x="386" y="153" fill="#0f1720" font-size="18" font-weight="700" text-anchor="middle">2</text>
+    <text x="366" y="206" fill="#e6edf3" font-size="17" font-weight="600">Add</text>
+    <text x="366" y="234" fill="#9fb0c0" font-size="13">Paste the URL of this</text>
+    <text x="366" y="254" fill="#9fb0c0" font-size="13">repository and add it.</text>
+    <rect x="624" y="100" width="258" height="200" rx="14" fill="#16202b" stroke="#28394a"/>
+    <circle cx="668" cy="146" r="22" fill="url(#accent)"/>
+    <text x="668" y="153" fill="#0f1720" font-size="18" font-weight="700" text-anchor="middle">3</text>
+    <text x="648" y="206" fill="#e6edf3" font-size="17" font-weight="600">Install</text>
+    <text x="648" y="234" fill="#9fb0c0" font-size="13">Install Mail Archiver and set a</text>
+    <text x="648" y="254" fill="#9fb0c0" font-size="13">master password.</text>
+    <rect x="906" y="100" width="258" height="200" rx="14" fill="#16202b" stroke="#28394a"/>
+    <circle cx="950" cy="146" r="22" fill="url(#accent)"/>
+    <text x="950" y="153" fill="#0f1720" font-size="18" font-weight="700" text-anchor="middle">4</text>
+    <text x="930" y="206" fill="#e6edf3" font-size="17" font-weight="600">Start</text>
+    <text x="930" y="234" fill="#9fb0c0" font-size="13">Start it and open Mail Archiver</text>
+    <text x="930" y="254" fill="#9fb0c0" font-size="13">from the sidebar.</text>
+  </g>
+</svg>

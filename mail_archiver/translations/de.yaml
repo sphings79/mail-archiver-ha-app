@@ -1,0 +1,32 @@
+configuration:
+  master_password:
+    name: Master-Passwort
+    description: >-
+      Verschlüsselt alle Postfach-Passwörter, die Mail Archiver speichert. Jetzt
+      festlegen und aufbewahren: ohne dieses Passwort lässt sich die
+      Konfiguration nicht mehr öffnen.
+  ui_password:
+    name: Passwort der Oberfläche
+    description: >-
+      Nur nötig, um die Oberfläche außerhalb von Home Assistant zu erreichen.
+      Leer lassen, dann antwortet das Add-on ausschließlich der Seitenleiste.
+  cron:
+    name: Zeitplan
+    description: >-
+      Cron-Ausdruck für die automatische Sicherung, zum Beispiel "0 3 * * *" für
+      jede Nacht um drei. Leer heißt kein Zeitplan.
+  cron_export_attachments:
+    name: Anhänge bei jedem geplanten Lauf exportieren
+    description: >-
+      Führt nach jeder geplanten Sicherung den Anhang-Export aus, mit den
+      Einstellungen des jeweiligen Kontos.
+  archive_path:
+    name: Archivordner
+    description: >-
+      Wohin die .eml-Dateien geschrieben werden. Muss unter /share, /media oder
+      /backup liegen, sonst ist er beim nächsten Update weg.
+  log_level:
+    name: Protokollstufe
+    description: Wie viel das Add-on in sein Protokoll schreibt.
+network:
+  8484/tcp: Weboberfläche, nur mit gesetztem Passwort der Oberfläche erreichbar

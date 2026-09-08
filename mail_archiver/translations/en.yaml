@@ -1,0 +1,31 @@
+configuration:
+  master_password:
+    name: Master password
+    description: >-
+      Encrypts every mailbox password Mail Archiver stores. Choose one now and
+      keep it: without it the configuration cannot be opened again.
+  ui_password:
+    name: Interface password
+    description: >-
+      Only needed to reach the interface from outside Home Assistant. Leave it
+      empty and the add-on answers the sidebar and nothing else.
+  cron:
+    name: Schedule
+    description: >-
+      Cron expression for the automatic backup, for example "0 3 * * *" for
+      every night at three. Empty means no schedule.
+  cron_export_attachments:
+    name: Export attachments on every scheduled run
+    description: >-
+      Runs the attachment export after each scheduled backup, using the
+      settings of each account.
+  archive_path:
+    name: Archive folder
+    description: >-
+      Where the .eml files are written. Must be below /share, /media or
+      /backup, otherwise it is lost on the next update.
+  log_level:
+    name: Log level
+    description: How much the add-on writes to its log.
+network:
+  8484/tcp: Web interface, only reachable with an interface password set
