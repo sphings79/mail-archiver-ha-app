@@ -22,6 +22,7 @@
 - [Konfiguration](#konfiguration)
 - [Wo die Daten liegen](#wo-die-daten-liegen)
 - [In der Seitenleiste](#in-der-seitenleiste)
+- [Wie Updates ablaufen](#wie-updates-ablaufen)
 - [Sensoren und Automatisierungen](#sensoren-und-automatisierungen)
 - [Voraussetzungen](#voraussetzungen)
 - [Fehlersuche](#fehlersuche)
@@ -98,6 +99,22 @@ Ingress braucht keinen offenen Port: Home Assistant reicht die Oberfläche selbs
 durch, und das Add-on antwortet ausschließlich diesem Proxy. Wer sie zusätzlich
 aus einem anderen Browser oder mit der Desktop-App im Fernmodus erreichen will,
 setzt `ui_password` und gibt im Reiter *Netzwerk* Port `8484` frei.
+
+## Wie Updates ablaufen
+
+Das Add-on ist ein Zeiger auf das Mail-Archiver-Image — ein Update ist also eine
+Versionsnummer und sonst nichts. Ein Workflow hier schaut stündlich nach, ob die
+Anwendung ein neueres Release hat, prüft, dass das passende Image auch
+veröffentlicht ist, und trägt die Version ein. Home Assistant bietet das Update
+danach wie gewohnt an.
+
+Geholt wird, nicht geschickt: Ein Workflow-Token gilt nur für sein eigenes
+Repository, ein Push aus dem Anwendungs-Repository bräuchte also einen
+persönlichen Zugriffstoken — so braucht es gar kein Geheimnis. Wer eine Version
+sofort haben will, startet unter *Actions* **Follow Mail Archiver** von Hand.
+
+> GitHub schaltet geplante Workflows nach 60 Tagen ohne Commit im Repository ab.
+> Wenn hier zwei Monate nichts passiert ist, einmal von Hand starten.
 
 ## Sensoren und Automatisierungen
 

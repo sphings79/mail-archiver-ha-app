@@ -22,6 +22,7 @@
 - [Configuration](#configuration)
 - [Where things are kept](#where-things-are-kept)
 - [In the sidebar](#in-the-sidebar)
+- [How updates work](#how-updates-work)
 - [Sensors and automations](#sensors-and-automations)
 - [Requirements](#requirements)
 - [Troubleshooting](#troubleshooting)
@@ -99,6 +100,22 @@ Ingress needs no open port: Home Assistant proxies the interface itself, and
 the add-on only answers that proxy. Set an `ui_password` and map port `8484`
 in the *Network* tab if you also want to reach it from a browser elsewhere, or
 from the Mail Archiver desktop app in remote mode.
+
+## How updates work
+
+The add-on is a pointer at the Mail Archiver image, so an update is a version
+number and nothing else. A workflow here checks hourly whether the application
+has a newer release, makes sure the matching image is really published, and
+writes the version into the add-on. Home Assistant then offers the update as
+usual.
+
+It pulls rather than being pushed to: a workflow token is only valid for its
+own repository, so pushing from the application repository would need a
+personal access token, and this needs no secret at all. To fetch a version
+straight away, run **Follow Mail Archiver** under *Actions*.
+
+> GitHub switches scheduled workflows off after 60 days without any commit in a
+> repository. If nothing happened here for two months, run it once by hand.
 
 ## Sensors and automations
 
