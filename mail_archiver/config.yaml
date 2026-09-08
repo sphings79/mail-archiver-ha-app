@@ -10,7 +10,6 @@ arch:
   - aarch64
   - amd64
 init: false
-startup: application
 boot: auto
 # The interface appears in the sidebar. Home Assistant authenticates the user
 # before the request arrives, so the add-on runs without a login of its own.
@@ -18,7 +17,6 @@ ingress: true
 ingress_port: 8484
 panel_icon: mdi:email-sync-outline
 panel_title: Mail Archiver
-panel_admin: true
 # Only needed to reach the interface from outside Home Assistant, which also
 # requires an interface password below.
 ports:
