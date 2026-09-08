@@ -16,7 +16,8 @@ import re
 import sys
 
 CONFIG = Path("mail_archiver/config.yaml")
-CHANGELOG = Path("CHANGELOG.md")
+# Home Assistant reads the changelog from the add-on folder, not the root.
+CHANGELOG = Path("mail_archiver/CHANGELOG.md")
 BADGES = [Path("README.md"), Path("README.de.md")]
 TEMPLATE = Path(".github/ISSUE_TEMPLATE/bug_report.yml")
 
