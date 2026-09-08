@@ -10,7 +10,6 @@ arch:
   - aarch64
   - amd64
 init: false
-boot: auto
 # The interface appears in the sidebar. Home Assistant authenticates the user
 # before the request arrives, so the add-on runs without a login of its own.
 ingress: true
