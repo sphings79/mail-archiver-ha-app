@@ -2,6 +2,11 @@
 
 ## 1.1.2 - 2026-09-08
 
+- Follows Mail Archiver 1.1.2. See the
+  [release notes](https://github.com/sphings79/mail-archiver/releases/tag/v1.1.2) for what changed in the application.
+
+## 1.1.2 - 2026-09-08
+
 First release of the add-on.
 
 - Runs the published Mail Archiver image on Home Assistant OS, for `aarch64`

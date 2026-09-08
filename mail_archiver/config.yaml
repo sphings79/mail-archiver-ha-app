@@ -1,5 +1,5 @@
 name: Mail Archiver
-version: "1.1.0"
+version: "1.1.2"
 slug: mail_archiver
 description: Back up IMAP mailboxes to plain .eml files you own - read only, incremental, nothing deleted on the server.
 url: https://github.com/sphings79/mail-archiver-ha-app
