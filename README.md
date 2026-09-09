@@ -8,7 +8,7 @@
   read only, incremental, nothing deleted on the server, nothing marked as read.
 
   [![Add-on](https://img.shields.io/badge/Home%20Assistant-Add--on-41BDF5?style=for-the-badge)](https://www.home-assistant.io/addons/)
-  [![Version](https://img.shields.io/badge/version-1.2.1-7C7CF5?style=for-the-badge)](https://github.com/sphings79/amberchest/releases)
+  [![Version](https://img.shields.io/badge/version-2.0.0-7C7CF5?style=for-the-badge)](https://github.com/sphings79/amberchest/releases)
   [![Architectures](https://img.shields.io/badge/arch-aarch64%20%7C%20amd64-3ddc97?style=for-the-badge)](#requirements)
   [![Licence](https://img.shields.io/badge/licence-AGPL--3.0-e0457b?style=for-the-badge)](LICENSE)
 

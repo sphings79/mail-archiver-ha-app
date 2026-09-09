@@ -8,7 +8,7 @@
   nur lesend, inkrementell, ohne auf dem Server zu löschen oder als gelesen zu markieren.
 
   [![Add-on](https://img.shields.io/badge/Home%20Assistant-Add--on-41BDF5?style=for-the-badge)](https://www.home-assistant.io/addons/)
-  [![Version](https://img.shields.io/badge/Version-1.2.1-7C7CF5?style=for-the-badge)](https://github.com/sphings79/amberchest/releases)
+  [![Version](https://img.shields.io/badge/Version-2.0.0-7C7CF5?style=for-the-badge)](https://github.com/sphings79/amberchest/releases)
   [![Architekturen](https://img.shields.io/badge/arch-aarch64%20%7C%20amd64-3ddc97?style=for-the-badge)](#voraussetzungen)
   [![Lizenz](https://img.shields.io/badge/Lizenz-AGPL--3.0-e0457b?style=for-the-badge)](LICENSE)
 
