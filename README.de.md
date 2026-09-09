@@ -18,6 +18,7 @@
 ## Inhalt
 
 - [Was das Add-on macht](#was-das-add-on-macht)
+- [Drei Projekte, ein Archiv](#drei-projekte-ein-archiv)
 - [Installation](#installation)
 - [Konfiguration](#konfiguration)
 - [Wo die Daten liegen](#wo-die-daten-liegen)
@@ -45,6 +46,17 @@ gelesen markiert. Dieses Add-on betreibt das auf Home Assistant OS:
 - **Mit Home Assistant gesichert.** Konfiguration und Archiv liegen dort, wo der
   Supervisor sie aufhebt — sie überleben Updates und landen im Backup.
 - **Nach Zeitplan.** Ein Cron-Ausdruck in den Optionen genügt.
+
+## Drei Projekte, ein Archiv
+
+| | Was es ist |
+| --- | --- |
+| [**Mail Archiver**](https://github.com/sphings79/mail-archiver) | Die Anwendung selbst: Desktop-App für macOS, Windows und Linux, dazu der Docker-Container, den dieses Add-on betreibt |
+| [**Mail Archiver Integration**](https://github.com/sphings79/mail-archiver-home-assistant) | Home-Assistant-Integration aus HACS: ein Gerät je Postfach, Sensoren, ein Knopf zum Sichern und eine Lovelace-Karte |
+| **Home Assistant App (Addon)** (hier) | Dieses Repository: Mail Archiver unter Home Assistant OS, per Ingress in der Seitenleiste |
+
+Add-on und Integration ergänzen sich: das Add-on betreibt die Instanz, die
+Integration macht Entitäten daraus.
 
 ## Installation
 

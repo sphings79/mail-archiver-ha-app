@@ -18,6 +18,7 @@
 ## Table of contents
 
 - [What this add-on does](#what-this-add-on-does)
+- [Three projects, one archive](#three-projects-one-archive)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Where things are kept](#where-things-are-kept)
@@ -46,6 +47,17 @@ runs it on Home Assistant OS:
   supervisor keeps them, so they survive updates and land in your backups.
 - **On a schedule.** A cron expression in the options is all the automation it
   needs.
+
+## Three projects, one archive
+
+| | What it is |
+| --- | --- |
+| [**Mail Archiver**](https://github.com/sphings79/mail-archiver) | The application itself: desktop app for macOS, Windows and Linux, plus the Docker container this add-on runs |
+| [**Mail Archiver Integration**](https://github.com/sphings79/mail-archiver-home-assistant) | Home Assistant integration from HACS: a device per mailbox, sensors, a backup button and a Lovelace card |
+| **Home Assistant App (Add-on)** (here) | This repository: Mail Archiver on Home Assistant OS, in the sidebar through ingress |
+
+The add-on and the integration work well together: the add-on runs the
+instance, the integration turns it into entities.
 
 ## Installation
 
