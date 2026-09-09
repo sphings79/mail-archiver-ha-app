@@ -75,6 +75,40 @@ Both are part of a Home Assistant backup, which means your archive is in it as
 well. If that makes your backups too large, put the archive on a network share
 mounted under `/media` and exclude it there.
 
+## Reaching the add-on from outside
+
+Ingress puts the interface in the sidebar and needs no open port, which is all
+most installations need. It is also the reason the add-on refuses everything
+that is not the supervisor: there is no login in front of an ingress interface,
+so that check is the only thing protecting it.
+
+Two settings open it up, both on the add-on's **Configuration** tab:
+
+1. Set **ui_password** under *Options*. This is the login the interface then
+   asks for.
+2. Under *Network*, map port `8484` to the host.
+
+The interface is then also at `http://homeassistant.local:8484` — for a browser
+on another machine, and for the Mail Archiver desktop app.
+
+Mapping the port without setting the password changes nothing: the add-on goes
+on refusing every request that did not come from the supervisor, and the log
+says `reachable through the sidebar, and only from the supervisor`.
+
+### Moving an archive into the add-on
+
+This is what the port is for in practice. An archive that grew up in the
+desktop app moves over in three steps:
+
+1. Set `ui_password` and map the port as above, then restart the add-on
+2. In the add-on, create the account with the same address
+3. In the desktop app, **Move** on that account, address
+   `http://homeassistant.local:8484`, the interface password, pick the account
+
+The files travel and the add-on rebuilds its index from the journals in them.
+An interrupted transfer is harmless — run it again and only what is missing
+goes over. Nothing is deleted on the desktop side.
+
 ## Home Assistant
 
 The add-on brings the interface into the sidebar, phone included. For sensors,

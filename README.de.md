@@ -23,6 +23,7 @@
 - [Konfiguration](#konfiguration)
 - [Wo die Daten liegen](#wo-die-daten-liegen)
 - [In der Seitenleiste](#in-der-seitenleiste)
+  - [Von außen erreichbar machen](#von-außen-erreichbar-machen)
 - [Wie Updates ablaufen](#wie-updates-ablaufen)
 - [Sensoren und Automatisierungen](#sensoren-und-automatisierungen)
 - [Voraussetzungen](#voraussetzungen)
@@ -108,9 +109,26 @@ Backups dadurch zu groß werden: `archive_path` auf eine Netzwerkfreigabe unter
 <img src="assets/sidebar.svg" alt="Home Assistant mit Mail Archiver in der Seitenleiste, die Übersicht zeigt Nachrichtenzahl und Archivgröße" width="100%">
 
 Ingress braucht keinen offenen Port: Home Assistant reicht die Oberfläche selbst
-durch, und das Add-on antwortet ausschließlich diesem Proxy. Wer sie zusätzlich
-aus einem anderen Browser oder mit der Desktop-App im Fernmodus erreichen will,
-setzt `ui_password` und gibt im Reiter *Netzwerk* Port `8484` frei.
+durch, und das Add-on antwortet ausschließlich diesem Proxy.
+
+### Von außen erreichbar machen
+
+Ingress ist keine Adresse, mit der andere Programme sprechen können. Ein
+Browser auf einem anderen Rechner — oder die Desktop-App, die ein Archiv
+herüberschiebt — braucht deshalb den Port. Zwei Einstellungen im Reiter
+**Konfiguration**:
+
+1. Unter *Optionen* `ui_password` setzen — die Anmeldung, nach der die
+   Oberfläche dann fragt
+2. Unter *Netzwerk* den Port `8484` auf den Host legen
+
+Die Oberfläche antwortet dann auch unter `http://homeassistant.local:8484`. Den
+Port ohne das Passwort freizugeben ändert nichts: ohne eigene Anmeldung weist
+das Add-on alles ab, was nicht der Supervisor ist, und schreibt das ins
+Protokoll.
+
+Genau diese Adresse will **Umziehen** in der Desktop-App — so landet ein
+Archiv, das auf dem Laptop angefangen hat, am Ende in Home Assistant.
 
 ## Wie Updates ablaufen
 

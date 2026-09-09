@@ -23,6 +23,7 @@
 - [Configuration](#configuration)
 - [Where things are kept](#where-things-are-kept)
 - [In the sidebar](#in-the-sidebar)
+  - [Reaching it from outside](#reaching-it-from-outside)
 - [How updates work](#how-updates-work)
 - [Sensors and automations](#sensors-and-automations)
 - [Requirements](#requirements)
@@ -109,9 +110,23 @@ mounted under `/media` and exclude it there.
 <img src="assets/sidebar.svg" alt="Home Assistant with Mail Archiver in the sidebar, showing the overview with message count and archive size" width="100%">
 
 Ingress needs no open port: Home Assistant proxies the interface itself, and
-the add-on only answers that proxy. Set an `ui_password` and map port `8484`
-in the *Network* tab if you also want to reach it from a browser elsewhere, or
-from the Mail Archiver desktop app in remote mode.
+the add-on only answers that proxy.
+
+### Reaching it from outside
+
+Ingress is not an address other programs can talk to, so a browser on another
+machine — or the Mail Archiver desktop app moving an archive over — needs the
+port. Two settings on the **Configuration** tab:
+
+1. Set `ui_password` under *Options*, the login the interface then asks for
+2. Under *Network*, map port `8484` to the host
+
+The interface then also answers at `http://homeassistant.local:8484`. Mapping
+the port without the password changes nothing: without a login of its own the
+add-on refuses everything that is not the supervisor, and says so in the log.
+
+That address is what **Move** in the desktop app wants, which is how an archive
+that started on a laptop ends up in Home Assistant.
 
 ## How updates work
 
