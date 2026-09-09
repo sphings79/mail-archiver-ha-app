@@ -8,8 +8,10 @@ configuration:
   ui_password:
     name: Passwort der Oberfläche
     description: >-
-      Nur nötig, um die Oberfläche außerhalb von Home Assistant zu erreichen.
-      Leer lassen, dann antwortet das Add-on ausschließlich der Seitenleiste.
+      Nur nötig, um die Oberfläche außerhalb von Home Assistant zu erreichen —
+      für einen Browser anderswo oder um ein Archiv aus der Desktop-App
+      herüberzuschieben. Leer lassen, dann antwortet das Add-on ausschließlich
+      der Seitenleiste. Der Reiter Dokumentation zeigt es mit Bildern.
   cron:
     name: Zeitplan
     description: >-
@@ -29,4 +31,7 @@ configuration:
     name: Protokollstufe
     description: Wie viel das Add-on in sein Protokoll schreibt.
 network:
-  8484/tcp: Weboberfläche, nur mit gesetztem Passwort der Oberfläche erreichbar
+  8484/tcp: >-
+    Weboberfläche. Braucht oben ein Passwort der Oberfläche, sonst weist das
+    Add-on weiter alles ab, was nicht Home Assistant selbst ist. Siehe den
+    Reiter Dokumentation.

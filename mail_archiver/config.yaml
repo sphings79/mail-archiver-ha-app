@@ -21,7 +21,7 @@ panel_title: Mail Archiver
 ports:
   8484/tcp: null
 ports_description:
-  8484/tcp: Web interface, only with an interface password set
+  8484/tcp: Web interface, only with an interface password set - see the Documentation tab
 map:
   - type: share
     read_only: false

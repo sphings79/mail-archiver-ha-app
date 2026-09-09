@@ -7,8 +7,10 @@ configuration:
   ui_password:
     name: Interface password
     description: >-
-      Only needed to reach the interface from outside Home Assistant. Leave it
-      empty and the add-on answers the sidebar and nothing else.
+      Only needed to reach the interface from outside Home Assistant, for a
+      browser elsewhere or to move an archive over from the desktop app. Leave
+      it empty and the add-on answers the sidebar and nothing else. The
+      Documentation tab walks through it with pictures.
   cron:
     name: Schedule
     description: >-
@@ -28,4 +30,7 @@ configuration:
     name: Log level
     description: How much the add-on writes to its log.
 network:
-  8484/tcp: Web interface, only reachable with an interface password set
+  8484/tcp: >-
+    Web interface. Needs an interface password above, otherwise the add-on
+    goes on refusing everything that is not Home Assistant itself. See the
+    Documentation tab.

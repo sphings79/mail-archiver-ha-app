@@ -82,22 +82,47 @@ most installations need. It is also the reason the add-on refuses everything
 that is not the supervisor: there is no login in front of an ingress interface,
 so that check is the only thing protecting it.
 
-Two settings open it up, both on the add-on's **Configuration** tab:
+Open it up in three steps.
 
-1. Set **ui_password** under *Options*. This is the login the interface then
-   asks for.
-2. Under *Network*, map port `8484` to the host.
+### 1. Set an interface password
 
-The interface is then also at `http://homeassistant.local:8484` — for a browser
-on another machine, and for the Mail Archiver desktop app.
+On the **Configuration** tab, under *Options*:
 
-The same thing with pictures of both settings, and what to do when it does not
-work: [Reaching the add-on from outside](https://github.com/sphings79/mail-archiver-ha-app/blob/main/docs/remote-access.md)
-([deutsch](https://github.com/sphings79/mail-archiver-ha-app/blob/main/docs/remote-access.de.md)).
+<img src="https://raw.githubusercontent.com/sphings79/mail-archiver-ha-app/main/assets/remote-options.svg" alt="The add-on configuration with the Interface password field filled in" width="100%">
 
-Mapping the port without setting the password changes nothing: the add-on goes
-on refusing every request that did not come from the supervisor, and the log
-says `reachable through the sidebar, and only from the supervisor`.
+This is the password the interface will then ask for. It is **not** the master
+password — that one unlocks the encrypted configuration inside. Use a different
+one, and press *Save*.
+
+### 2. Map the port
+
+Same tab, further down, under *Network*. Enter `8484` as the host port:
+
+<img src="https://raw.githubusercontent.com/sphings79/mail-archiver-ha-app/main/assets/remote-network.svg" alt="The add-on network settings with host port 8484 next to container port 8484/tcp" width="100%">
+
+Any free port works; `8484` just keeps the address easy to remember. Press
+*Save*.
+
+### 3. Restart the add-on
+
+The options are read at start. After the restart the log says:
+
+```
+Running as a Home Assistant add-on with an interface password of its own
+```
+
+That line is the confirmation. If it still mentions the supervisor, the
+password did not get saved — and mapping the port alone changes nothing: every
+request that is not the supervisor is still answered with
+`403 Only reachable through Home Assistant`.
+
+The interface now also answers at `http://homeassistant.local:8484`, which is
+the address the Mail Archiver desktop app wants when it moves an archive over.
+The sidebar keeps working exactly as before.
+
+**More detail** — the archive move step by step, what to do when the name does
+not resolve, and what this port is and is not:
+[the full guide](https://github.com/sphings79/mail-archiver-ha-app/blob/main/docs/remote-access.md) ([deutsch](https://github.com/sphings79/mail-archiver-ha-app/blob/main/docs/remote-access.de.md)).
 
 ### Moving an archive into the add-on
 
