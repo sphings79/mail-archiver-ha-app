@@ -24,7 +24,7 @@
     <g stroke="#41BDF5" stroke-width="7" fill="none" stroke-linejoin="round">
       <path d="M900 330 1010 230 1120 330"/>
       <path d="M930 316v110h160v-110"/>
-      <path d="M975 380a50 50 0 0 1 70 0" stroke-linecap="round"/>
+      <path d="M985 426v-42a25 25 0 0 1 50 0v42"/>
     </g>
   </g>
 </svg>

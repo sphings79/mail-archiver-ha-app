@@ -81,7 +81,7 @@ def banner() -> str:
         + f'    <g stroke="{HA}" stroke-width="4" fill="none" stroke-linejoin="round">\n'
         + '      <path d="M1000 210 1075 140 1150 210"/>\n'
         + '      <path d="M1020 200v70h110v-70"/>\n'
-        + '      <path d="M1050 240a30 30 0 0 1 50 0" stroke-linecap="round"/>\n'
+        + '      <path d="M1060 270v-26a15 15 0 0 1 30 0v26"/>\n'
         + "    </g>\n"
     )
     return frame(1200, 400, "Mail Archiver as a Home Assistant add-on", body)
@@ -191,7 +191,7 @@ def social() -> str:
         + f'    <g stroke="{HA}" stroke-width="7" fill="none" stroke-linejoin="round">\n'
         + '      <path d="M900 330 1010 230 1120 330"/>\n'
         + '      <path d="M930 316v110h160v-110"/>\n'
-        + '      <path d="M975 380a50 50 0 0 1 70 0" stroke-linecap="round"/>\n'
+        + '      <path d="M985 426v-42a25 25 0 0 1 50 0v42"/>\n'
         + "    </g>\n"
     )
     return frame(1280, 640, "Mail Archiver as a Home Assistant add-on", body)
