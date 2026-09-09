@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.1 - 2026-09-09
+
+- Follows Mail Archiver 1.2.1. See the
+  [release notes](https://github.com/sphings79/mail-archiver/releases/tag/v1.2.1) for what changed in the application.
+
 ## 1.2.0 - 2026-09-09
 
 Follows Mail Archiver 1.2.0. The
