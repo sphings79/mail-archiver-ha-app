@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="The add-on network settings with port 8484 mapped to the host">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#41BDF5"/>
+      <stop offset="1" stop-color="#7C7CF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" rx="16" fill="#0f1720"/>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="60" y="58" fill="#e6edf3" font-size="22" font-weight="700">Mail Archiver</text>
+    <text x="89.0" y="94" fill="#9fb0c0" font-size="14" text-anchor="middle">Info</text>
+    <text x="205.5" y="94" fill="#9fb0c0" font-size="14" text-anchor="middle">Documentation</text>
+    <rect x="293" y="104" width="139" height="3" rx="1.5" fill="#41BDF5"/>
+    <text x="362.5" y="94" fill="#41BDF5" font-size="14" font-weight="600" text-anchor="middle">Configuration</text>
+    <text x="474.5" y="94" fill="#9fb0c0" font-size="14" text-anchor="middle">Log</text>
+    <line x1="60" y1="107" x2="1140" y2="107" stroke="#28394a"/>
+    <rect x="60" y="140" width="1080" height="300" rx="14" fill="#16202b" stroke="#28394a"/>
+    <text x="88" y="184" fill="#e6edf3" font-size="18" font-weight="600">Network</text>
+    <text x="88" y="212" fill="#9fb0c0" font-size="13">Leave a field empty and the port stays closed.</text>
+    <text x="88" y="264" fill="#9fb0c0" font-size="13">Host</text>
+    <text x="320" y="264" fill="#9fb0c0" font-size="13">Container</text>
+    <rect x="88" y="278" width="200" height="42" rx="8" fill="#101923" stroke="#41BDF5" stroke-width="2"/>
+    <text x="104" y="305" fill="#e6edf3" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">8484</text>
+    <text x="320" y="305" fill="#9fb0c0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">8484/tcp</text>
+    <circle cx="640" cy="299" r="18" fill="url(#accent)"/>
+    <text x="640" y="306" fill="#0f1720" font-size="16" font-weight="700" text-anchor="middle">2</text>
+    <text x="88" y="356" fill="#9fb0c0" font-size="12.5">Web interface, only reachable with an interface password set</text>
+    <rect x="940" y="376" width="172" height="44" rx="10" fill="url(#accent)" stroke="none"/>
+    <text x="1026" y="404" fill="#0f1720" font-size="15" font-weight="700" text-anchor="middle">SAVE</text>
+  </g>
+</svg>

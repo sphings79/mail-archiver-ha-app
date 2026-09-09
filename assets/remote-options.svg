@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="The add-on configuration with the interface password filled in">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#41BDF5"/>
+      <stop offset="1" stop-color="#7C7CF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" rx="16" fill="#0f1720"/>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="60" y="58" fill="#e6edf3" font-size="22" font-weight="700">Mail Archiver</text>
+    <text x="89.0" y="94" fill="#9fb0c0" font-size="14" text-anchor="middle">Info</text>
+    <text x="205.5" y="94" fill="#9fb0c0" font-size="14" text-anchor="middle">Documentation</text>
+    <rect x="293" y="104" width="139" height="3" rx="1.5" fill="#41BDF5"/>
+    <text x="362.5" y="94" fill="#41BDF5" font-size="14" font-weight="600" text-anchor="middle">Configuration</text>
+    <text x="474.5" y="94" fill="#9fb0c0" font-size="14" text-anchor="middle">Log</text>
+    <line x1="60" y1="107" x2="1140" y2="107" stroke="#28394a"/>
+    <rect x="60" y="140" width="1080" height="420" rx="14" fill="#16202b" stroke="#28394a"/>
+    <text x="88" y="184" fill="#e6edf3" font-size="18" font-weight="600">Options</text>
+    <text x="88" y="216" fill="#9fb0c0" font-size="13">Master password</text>
+    <rect x="88" y="226" width="900" height="42" rx="8" fill="#101923" stroke="#28394a" stroke-width="1"/>
+    <text x="104" y="253" fill="#e6edf3" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">••••••••••••</text>
+    <text x="88" y="290" fill="#9fb0c0" font-size="12.5">Encrypts every mailbox password Mail Archiver stores.</text>
+    <text x="88" y="320" fill="#9fb0c0" font-size="13">Interface password</text>
+    <rect x="88" y="330" width="900" height="42" rx="8" fill="#101923" stroke="#41BDF5" stroke-width="2"/>
+    <text x="104" y="357" fill="#e6edf3" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">••••••••••••</text>
+    <text x="88" y="394" fill="#9fb0c0" font-size="12.5">Only needed to reach the interface from outside Home Assistant. Leave it empty and the add-on answers the sidebar and nothing else.</text>
+    <circle cx="1022" cy="351" r="18" fill="url(#accent)"/>
+    <text x="1022" y="358" fill="#0f1720" font-size="16" font-weight="700" text-anchor="middle">1</text>
+    <text x="88" y="424" fill="#9fb0c0" font-size="13">Archive folder</text>
+    <rect x="88" y="434" width="900" height="42" rx="8" fill="#101923" stroke="#28394a" stroke-width="1"/>
+    <text x="104" y="461" fill="#e6edf3" font-size="15">/share/mail-archive</text>
+    <text x="88" y="498" fill="#9fb0c0" font-size="12.5">Where the .eml files are written.</text>
+    <rect x="940" y="496" width="172" height="44" rx="10" fill="url(#accent)" stroke="none"/>
+    <text x="1026" y="524" fill="#0f1720" font-size="15" font-weight="700" text-anchor="middle">SAVE</text>
+  </g>
+</svg>

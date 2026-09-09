@@ -91,6 +91,10 @@ Two settings open it up, both on the add-on's **Configuration** tab:
 The interface is then also at `http://homeassistant.local:8484` — for a browser
 on another machine, and for the Mail Archiver desktop app.
 
+The same thing with pictures of both settings, and what to do when it does not
+work: [Reaching the add-on from outside](https://github.com/sphings79/mail-archiver-ha-app/blob/main/docs/remote-access.md)
+([deutsch](https://github.com/sphings79/mail-archiver-ha-app/blob/main/docs/remote-access.de.md)).
+
 Mapping the port without setting the password changes nothing: the add-on goes
 on refusing every request that did not come from the supervisor, and the log
 says `reachable through the sidebar, and only from the supervisor`.

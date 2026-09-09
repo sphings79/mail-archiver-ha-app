@@ -197,12 +197,89 @@ def social() -> str:
     return frame(1280, 640, "Mail Archiver as a Home Assistant add-on", body)
 
 
+def input_row(x, y, w, label, value, description, badge=None, highlight=False):
+    """One labelled field of the add-on configuration, as Home Assistant draws it."""
+    stroke = HA if highlight else BORDER
+    out = text(x, y, label, MUTED, 13)
+    out += f'    <rect x="{x}" y="{y + 10}" width="{w}" height="42" rx="8" fill="#101923" stroke="{stroke}" stroke-width="{2 if highlight else 1}"/>\n'
+    out += text(x + 16, y + 37, value, TEXT if value else MUTED, 15, family=MONO if value.startswith("\u2022") else None)
+    if description:
+        out += text(x, y + 74, description, MUTED, 12.5)
+    if badge:
+        out += f'    <circle cx="{x + w + 34}" cy="{y + 31}" r="18" fill="url(#accent)"/>\n'
+        out += text(x + w + 34, y + 38, badge, "#0f1720", 16, "700", anchor="middle")
+    return out
+
+
+def tabs(x, y, active: str) -> str:
+    """The tab row of an add-on page."""
+    out = ""
+    for name in ["Info", "Documentation", "Configuration", "Log"]:
+        width = 22 + len(name) * 9
+        on = name == active
+        if on:
+            out += f'    <rect x="{x}" y="{y + 30}" width="{width}" height="3" rx="1.5" fill="{HA}"/>\n'
+        out += text(x + width / 2, y + 20, name, HA if on else MUTED, 14, "600" if on else None, anchor="middle")
+        x += width + 18
+    return out
+
+
+def remote_options() -> str:
+    body = text(60, 58, "Mail Archiver", TEXT, 22, "700")
+    body += tabs(60, 74, "Configuration")
+    body += f'    <line x1="60" y1="107" x2="1140" y2="107" stroke="{BORDER}"/>\n'
+
+    body += card(60, 140, 1080, 420)
+    body += text(88, 184, "Options", TEXT, 18, "600")
+
+    body += input_row(88, 216, 900, "Master password", "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+                      "Encrypts every mailbox password Mail Archiver stores.")
+    body += input_row(88, 320, 900, "Interface password", "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+                      "Only needed to reach the interface from outside Home Assistant. Leave it empty and the add-on answers the sidebar and nothing else.",
+                      badge="1", highlight=True)
+    body += input_row(88, 424, 900, "Archive folder", "/share/mail-archive",
+                      "Where the .eml files are written.")
+
+    body += card(940, 496, 172, 44, 10, "url(#accent)", "none")
+    body += text(1026, 524, "SAVE", "#0f1720", 15, "700", anchor="middle")
+
+    return frame(1200, 600, "The add-on configuration with the interface password filled in", body)
+
+
+def remote_network() -> str:
+    body = text(60, 58, "Mail Archiver", TEXT, 22, "700")
+    body += tabs(60, 74, "Configuration")
+    body += f'    <line x1="60" y1="107" x2="1140" y2="107" stroke="{BORDER}"/>\n'
+
+    body += card(60, 140, 1080, 300)
+    body += text(88, 184, "Network", TEXT, 18, "600")
+    body += text(88, 212, "Leave a field empty and the port stays closed.", MUTED, 13)
+
+    body += text(88, 264, "Host", MUTED, 13)
+    body += text(320, 264, "Container", MUTED, 13)
+
+    body += f'    <rect x="88" y="278" width="200" height="42" rx="8" fill="#101923" stroke="{HA}" stroke-width="2"/>\n'
+    body += text(104, 305, "8484", TEXT, 15, family=MONO)
+    body += text(320, 305, "8484/tcp", MUTED, 15, family=MONO)
+    body += f'    <circle cx="640" cy="299" r="18" fill="url(#accent)"/>\n'
+    body += text(640, 306, "2", "#0f1720", 16, "700", anchor="middle")
+
+    body += text(88, 356, "Web interface, only reachable with an interface password set", MUTED, 12.5)
+
+    body += card(940, 376, 172, 44, 10, "url(#accent)", "none")
+    body += text(1026, 404, "SAVE", "#0f1720", 15, "700", anchor="middle")
+
+    return frame(1200, 480, "The add-on network settings with port 8484 mapped to the host", body)
+
+
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     (OUT / "banner.svg").write_text(banner())
     (OUT / "sidebar.svg").write_text(sidebar())
     (OUT / "install.svg").write_text(install())
     (OUT / "storage.svg").write_text(storage())
+    (OUT / "remote-options.svg").write_text(remote_options())
+    (OUT / "remote-network.svg").write_text(remote_network())
     (OUT / "social-preview.svg").write_text(social())
     print("wrote", ", ".join(sorted(p.name for p in OUT.glob("*.svg"))))
 

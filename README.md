@@ -128,6 +128,10 @@ add-on refuses everything that is not the supervisor, and says so in the log.
 That address is what **Move** in the desktop app wants, which is how an archive
 that started on a laptop ends up in Home Assistant.
 
+**[→ Step by step, with pictures](docs/remote-access.md)** — both settings, the
+restart, how to tell it worked, moving an archive over, and what to do when the
+name does not resolve.
+
 ## How updates work
 
 The add-on is a pointer at the Mail Archiver image, so an update is a version

@@ -130,6 +130,10 @@ Protokoll.
 Genau diese Adresse will **Umziehen** in der Desktop-App — so landet ein
 Archiv, das auf dem Laptop angefangen hat, am Ende in Home Assistant.
 
+**[→ Schritt für Schritt, mit Bildern](docs/remote-access.de.md)** — beide
+Einstellungen, der Neustart, woran du siehst, dass es geklappt hat, der Umzug
+eines Archivs und was zu tun ist, wenn der Name nicht auflöst.
+
 ## Wie Updates ablaufen
 
 Das Add-on ist ein Zeiger auf das Mail-Archiver-Image — ein Update ist also eine
