@@ -4,7 +4,7 @@
 
 Ab Werk ist das Add-on über die Seitenleiste erreichbar und sonst nirgends. Das
 ist Absicht — und zugleich der Grund, warum einiges nicht funktioniert, bevor du
-das änderst: ein Archiv aus der Mail-Archiver-Desktop-App herüberzuschieben zum
+das änderst: ein Archiv aus der AmberChest-Desktop-App herüberzuschieben zum
 Beispiel.
 
 Diese Seite ist der ganze Vorgang: zwei Einstellungen, ein Neustart.
@@ -29,7 +29,7 @@ Passwort hebt die Sperre auf, deshalb kommt es zuerst.
 
 ## Schritt 1 — Passwort der Oberfläche setzen
 
-**Einstellungen → Add-ons → Mail Archiver → Konfiguration**, unter *Optionen*:
+**Einstellungen → Add-ons → AmberChest → Konfiguration**, unter *Optionen*:
 
 <img src="../assets/remote-options.svg" alt="Die Add-on-Konfiguration mit ausgefülltem Feld für das Passwort der Oberfläche und dem Speichern-Knopf darunter" width="100%">
 
@@ -67,7 +67,7 @@ wurde das Passwort nicht gespeichert.
 ## Nachsehen, ob es klappt
 
 Im Browser auf einem anderen Rechner `http://homeassistant.local:8484` öffnen.
-Es sollte die Mail-Archiver-Oberfläche kommen und nach dem Passwort fragen.
+Es sollte die AmberChest-Oberfläche kommen und nach dem Passwort fragen.
 
 Die Seitenleiste funktioniert unverändert weiter, ohne Passwort — an Ingress
 ändert das alles nichts.
@@ -122,6 +122,6 @@ an einem offenen Port.
 ---
 
 Wenn dir das eine Stunde gespart hat: ein ⭐ auf
-[dem Add-on](https://github.com/sphings79/mail-archiver-ha-app) oder auf
-[Mail Archiver](https://github.com/sphings79/mail-archiver) freut mich, und
+[dem Add-on](https://github.com/sphings79/amberchest-ha-app) oder auf
+[AmberChest](https://github.com/sphings79/amberchest) freut mich, und
 einen [Kaffee](https://buymeacoffee.com/sphings) gibt es auch.

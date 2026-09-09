@@ -68,7 +68,7 @@ def banner() -> str:
         '    <circle cx="1040" cy="90" r="180" fill="url(#accent)" opacity="0.10"/>\n'
         + card(72, 96, 72, 72, 22, "url(#accent)", "none")
         + envelope(95, 120, 1.0)
-        + text(172, 132, "Mail Archiver", TEXT, 34, "700")
+        + text(172, 132, "AmberChest", TEXT, 34, "700")
         + text(172, 162, "Home Assistant App (Add-on)", HA, 20, "600")
         + text(72, 224, "Runs the mail backup on Home Assistant OS itself. Appears in the sidebar", MUTED, 17)
         + text(72, 250, "through ingress - in the browser and in the Home Assistant app.", MUTED, 17)
@@ -84,11 +84,11 @@ def banner() -> str:
         + '      <path d="M1060 270v-26a15 15 0 0 1 30 0v26"/>\n'
         + "    </g>\n"
     )
-    return frame(1200, 400, "Mail Archiver as a Home Assistant add-on", body)
+    return frame(1200, 400, "AmberChest as a Home Assistant add-on", body)
 
 
 def sidebar() -> str:
-    items = ["Übersicht", "Energie", "Verlauf", "Mail Archiver", "Entwickler", "Einstellungen"]
+    items = ["Übersicht", "Energie", "Verlauf", "AmberChest", "Entwickler", "Einstellungen"]
     body = (
         text(60, 62, "In the sidebar", TEXT, 22, "700")
         + text(60, 92, "Ingress puts the interface inside Home Assistant, phone included.", MUTED, 15)
@@ -96,7 +96,7 @@ def sidebar() -> str:
     )
     y = 176
     for item in items:
-        active = item == "Mail Archiver"
+        active = item == "AmberChest"
         if active:
             body += card(76, y - 22, 228, 36, 10, "#1d3a4d", "none")
         body += text(112, y, item, HA if active else MUTED, 14, "600" if active else None)
@@ -107,7 +107,7 @@ def sidebar() -> str:
 
     body += card(344, 130, 796, 380)
     body += card(344, 130, 796, 56, 14, "#101a24", "none")
-    body += text(372, 165, "Mail Archiver", TEXT, 16, "600")
+    body += text(372, 165, "AmberChest", TEXT, 16, "600")
     body += text(1116, 165, "Übersicht", MUTED, 13, anchor="end")
     body += card(372, 214, 350, 96)
     body += text(396, 246, "NACHRICHTEN", MUTED, 10)
@@ -128,8 +128,8 @@ def install() -> str:
     steps = [
         ("1", "Repository", "Settings, Add-ons, Add-on store, three dots, Repositories."),
         ("2", "Add", "Paste the URL of this repository and add it."),
-        ("3", "Install", "Install Mail Archiver and set a master password."),
-        ("4", "Start", "Start it and open Mail Archiver from the sidebar."),
+        ("3", "Install", "Install AmberChest and set a master password."),
+        ("4", "Start", "Start it and open AmberChest from the sidebar."),
     ]
     body = text(60, 62, "Installation", TEXT, 22, "700")
     x = 60
@@ -180,7 +180,7 @@ def social() -> str:
         '    <circle cx="1120" cy="120" r="260" fill="url(#accent)" opacity="0.12"/>\n'
         + card(96, 150, 96, 96, 28, "url(#accent)", "none")
         + envelope(126, 186, 1.3)
-        + text(224, 200, "Mail Archiver", TEXT, 46, "700")
+        + text(224, 200, "AmberChest", TEXT, 46, "700")
         + text(224, 244, "Home Assistant App (Add-on)", HA, 26, "600")
         + text(96, 330, "IMAP mailboxes backed up to files you own —", MUTED, 22)
         + text(96, 366, "in the sidebar, on Home Assistant OS.", MUTED, 22)
@@ -194,7 +194,7 @@ def social() -> str:
         + '      <path d="M985 426v-42a25 25 0 0 1 50 0v42"/>\n'
         + "    </g>\n"
     )
-    return frame(1280, 640, "Mail Archiver as a Home Assistant add-on", body)
+    return frame(1280, 640, "AmberChest as a Home Assistant add-on", body)
 
 
 def input_row(x, y, w, label, value, description, badge=None, highlight=False):
@@ -225,7 +225,7 @@ def tabs(x, y, active: str) -> str:
 
 
 def remote_options() -> str:
-    body = text(60, 58, "Mail Archiver", TEXT, 22, "700")
+    body = text(60, 58, "AmberChest", TEXT, 22, "700")
     body += tabs(60, 74, "Configuration")
     body += f'    <line x1="60" y1="107" x2="1140" y2="107" stroke="{BORDER}"/>\n'
 
@@ -233,7 +233,7 @@ def remote_options() -> str:
     body += text(88, 184, "Options", TEXT, 18, "600")
 
     body += input_row(88, 216, 900, "Master password", "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
-                      "Encrypts every mailbox password Mail Archiver stores.")
+                      "Encrypts every mailbox password AmberChest stores.")
     body += input_row(88, 320, 900, "Interface password", "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
                       "Only needed to reach the interface from outside Home Assistant. Leave it empty and the add-on answers the sidebar and nothing else.",
                       badge="1", highlight=True)
@@ -247,7 +247,7 @@ def remote_options() -> str:
 
 
 def remote_network() -> str:
-    body = text(60, 58, "Mail Archiver", TEXT, 22, "700")
+    body = text(60, 58, "AmberChest", TEXT, 22, "700")
     body += tabs(60, 74, "Configuration")
     body += f'    <line x1="60" y1="107" x2="1140" y2="107" stroke="{BORDER}"/>\n'
 

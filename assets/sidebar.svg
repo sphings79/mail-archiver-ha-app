@@ -17,7 +17,7 @@
     <text x="112" y="280" fill="#9fb0c0" font-size="14">Verlauf</text>
     <circle cx="94" cy="275" r="6" fill="none" stroke="#9fb0c0" stroke-width="1.6"/>
     <rect x="76" y="310" width="228" height="36" rx="10" fill="#1d3a4d" stroke="none"/>
-    <text x="112" y="332" fill="#41BDF5" font-size="14" font-weight="600">Mail Archiver</text>
+    <text x="112" y="332" fill="#41BDF5" font-size="14" font-weight="600">AmberChest</text>
     <circle cx="94" cy="327" r="6" fill="none" stroke="#41BDF5" stroke-width="1.6"/>
     <text x="112" y="384" fill="#9fb0c0" font-size="14">Entwickler</text>
     <circle cx="94" cy="379" r="6" fill="none" stroke="#9fb0c0" stroke-width="1.6"/>
@@ -25,7 +25,7 @@
     <circle cx="94" cy="431" r="6" fill="none" stroke="#9fb0c0" stroke-width="1.6"/>
     <rect x="344" y="130" width="796" height="380" rx="14" fill="#16202b" stroke="#28394a"/>
     <rect x="344" y="130" width="796" height="56" rx="14" fill="#101a24" stroke="none"/>
-    <text x="372" y="165" fill="#e6edf3" font-size="16" font-weight="600">Mail Archiver</text>
+    <text x="372" y="165" fill="#e6edf3" font-size="16" font-weight="600">AmberChest</text>
     <text x="1116" y="165" fill="#9fb0c0" font-size="13" text-anchor="end">Übersicht</text>
     <rect x="372" y="214" width="350" height="96" rx="14" fill="#16202b" stroke="#28394a"/>
     <text x="396" y="246" fill="#9fb0c0" font-size="10">NACHRICHTEN</text>

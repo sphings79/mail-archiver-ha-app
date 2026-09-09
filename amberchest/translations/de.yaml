@@ -2,7 +2,7 @@ configuration:
   master_password:
     name: Master-Passwort
     description: >-
-      Verschlüsselt alle Postfach-Passwörter, die Mail Archiver speichert. Jetzt
+      Verschlüsselt alle Postfach-Passwörter, die AmberChest speichert. Jetzt
       festlegen und aufbewahren: ohne dieses Passwort lässt sich die
       Konfiguration nicht mehr öffnen.
   ui_password:

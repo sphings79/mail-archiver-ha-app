@@ -4,7 +4,7 @@
 
 Out of the box the add-on is reachable through the sidebar and nowhere else.
 That is deliberate, and it is also the reason a few things do not work until
-you change it — moving an archive over from the Mail Archiver desktop app, for
+you change it — moving an archive over from the AmberChest desktop app, for
 one.
 
 This page is the whole procedure: two settings, one restart.
@@ -30,7 +30,7 @@ password is what lifts that restriction, so it comes first.
 
 ## Step 1 — set an interface password
 
-**Settings → Add-ons → Mail Archiver → Configuration**, under *Options*:
+**Settings → Add-ons → AmberChest → Configuration**, under *Options*:
 
 <img src="../assets/remote-options.svg" alt="The add-on configuration with the Interface password field filled in and the Save button below" width="100%">
 
@@ -68,7 +68,7 @@ password did not get saved.
 ## Check it
 
 Open `http://homeassistant.local:8484` in a browser on another machine. You
-should get the Mail Archiver interface asking for the interface password.
+should get the AmberChest interface asking for the interface password.
 
 The sidebar keeps working exactly as before, without a password — ingress is
 unaffected by any of this.
@@ -123,6 +123,6 @@ better than one password on an open port.
 ---
 
 If this saved you an hour: a ⭐ on
-[the add-on](https://github.com/sphings79/mail-archiver-ha-app) or
-[Mail Archiver](https://github.com/sphings79/mail-archiver) helps, and there is
+[the add-on](https://github.com/sphings79/amberchest-ha-app) or
+[AmberChest](https://github.com/sphings79/amberchest) helps, and there is
 a [coffee](https://buymeacoffee.com/sphings) button as well.

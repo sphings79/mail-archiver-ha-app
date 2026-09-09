@@ -1,4 +1,4 @@
-# Mail Archiver
+# AmberChest
 
 Backs up IMAP mailboxes to plain `.eml` files on your own storage — read only,
 incremental, and with the folder tree preserved. Nothing on the server is
@@ -7,8 +7,8 @@ deleted, nothing is marked as read.
 ## Installation
 
 1. **Settings → Add-ons → Add-on store → ⋮ → Repositories**
-2. Add `https://github.com/sphings79/mail-archiver-ha-app`
-3. Install **Mail Archiver**
+2. Add `https://github.com/sphings79/amberchest-ha-app`
+3. Install **AmberChest**
 4. Set a **master password** in the configuration tab
 5. Start the add-on and open it from the sidebar
 
@@ -52,7 +52,7 @@ Five fields, as usual: minute, hour, day of month, month, weekday.
 
 Empty means the add-on only backs up when you tell it to — from its own
 interface, from the
-[Mail Archiver integration](https://github.com/sphings79/mail-archiver-home-assistant),
+[AmberChest integration](https://github.com/sphings79/amberchest-home-assistant),
 or over MQTT.
 
 ### archive_path
@@ -88,7 +88,7 @@ Open it up in three steps.
 
 On the **Configuration** tab, under *Options*:
 
-<img src="https://raw.githubusercontent.com/sphings79/mail-archiver-ha-app/main/assets/remote-options.svg" alt="The add-on configuration with the Interface password field filled in" width="100%">
+<img src="https://raw.githubusercontent.com/sphings79/amberchest-ha-app/main/assets/remote-options.svg" alt="The add-on configuration with the Interface password field filled in" width="100%">
 
 This is the password the interface will then ask for. It is **not** the master
 password — that one unlocks the encrypted configuration inside. Use a different
@@ -98,7 +98,7 @@ one, and press *Save*.
 
 Same tab, further down, under *Network*. Enter `8484` as the host port:
 
-<img src="https://raw.githubusercontent.com/sphings79/mail-archiver-ha-app/main/assets/remote-network.svg" alt="The add-on network settings with host port 8484 next to container port 8484/tcp" width="100%">
+<img src="https://raw.githubusercontent.com/sphings79/amberchest-ha-app/main/assets/remote-network.svg" alt="The add-on network settings with host port 8484 next to container port 8484/tcp" width="100%">
 
 Any free port works; `8484` just keeps the address easy to remember. Press
 *Save*.
@@ -117,12 +117,12 @@ request that is not the supervisor is still answered with
 `403 Only reachable through Home Assistant`.
 
 The interface now also answers at `http://homeassistant.local:8484`, which is
-the address the Mail Archiver desktop app wants when it moves an archive over.
+the address the AmberChest desktop app wants when it moves an archive over.
 The sidebar keeps working exactly as before.
 
 **More detail** — the archive move step by step, what to do when the name does
 not resolve, and what this port is and is not:
-[the full guide](https://github.com/sphings79/mail-archiver-ha-app/blob/main/docs/remote-access.md) ([deutsch](https://github.com/sphings79/mail-archiver-ha-app/blob/main/docs/remote-access.de.md)).
+[the full guide](https://github.com/sphings79/amberchest-ha-app/blob/main/docs/remote-access.md) ([deutsch](https://github.com/sphings79/amberchest-ha-app/blob/main/docs/remote-access.de.md)).
 
 ### Moving an archive into the add-on
 
@@ -143,7 +143,7 @@ goes over. Nothing is deleted on the desktop side.
 The add-on brings the interface into the sidebar, phone included. For sensors,
 automations and a Lovelace card there are two more ways:
 
-- The [Mail Archiver integration](https://github.com/sphings79/mail-archiver-home-assistant)
+- The [AmberChest integration](https://github.com/sphings79/amberchest-home-assistant)
   from HACS: a device per mailbox, with a backup button and a card. Point it at
   host `localhost` and port `8484` — that only works with an interface password
   and the port mapped.
@@ -170,18 +170,18 @@ it fails anyway, the log says why.
 
 | | What it is |
 | --- | --- |
-| [Mail Archiver](https://github.com/sphings79/mail-archiver) | The application: desktop app for macOS, Windows and Linux, plus the Docker container this add-on runs |
-| [Mail Archiver Integration](https://github.com/sphings79/mail-archiver-home-assistant) | Home Assistant integration from HACS: a device per mailbox, sensors, a backup button and a Lovelace card |
-| [Home Assistant App (Add-on)](https://github.com/sphings79/mail-archiver-ha-app) | This one: Mail Archiver on Home Assistant OS, in the sidebar through ingress |
+| [AmberChest](https://github.com/sphings79/amberchest) | The application: desktop app for macOS, Windows and Linux, plus the Docker container this add-on runs |
+| [AmberChest Integration](https://github.com/sphings79/amberchest-home-assistant) | Home Assistant integration from HACS: a device per mailbox, sensors, a backup button and a Lovelace card |
+| [Home Assistant App (Add-on)](https://github.com/sphings79/amberchest-ha-app) | This one: AmberChest on Home Assistant OS, in the sidebar through ingress |
 
 ## Support
 
 Issues about the add-on packaging:
-[mail-archiver-ha-app](https://github.com/sphings79/mail-archiver-ha-app/issues).
-Issues about Mail Archiver itself:
-[mail-archiver](https://github.com/sphings79/mail-archiver/issues).
+[amberchest-ha-app](https://github.com/sphings79/amberchest-ha-app/issues).
+Issues about AmberChest itself:
+[amberchest](https://github.com/sphings79/amberchest/issues).
 
 If it is useful to you: a ⭐ on
-[the add-on](https://github.com/sphings79/mail-archiver-ha-app) or
-[Mail Archiver](https://github.com/sphings79/mail-archiver) helps, and there is
+[the add-on](https://github.com/sphings79/amberchest-ha-app) or
+[AmberChest](https://github.com/sphings79/amberchest) helps, and there is
 a [coffee](https://buymeacoffee.com/sphings) button as well.

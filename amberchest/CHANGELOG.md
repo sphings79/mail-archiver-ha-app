@@ -2,13 +2,13 @@
 
 ## 1.2.1 - 2026-09-09
 
-- Follows Mail Archiver 1.2.1. See the
-  [release notes](https://github.com/sphings79/mail-archiver/releases/tag/v1.2.1) for what changed in the application.
+- Follows AmberChest 1.2.1. See the
+  [release notes](https://github.com/sphings79/amberchest/releases/tag/v1.2.1) for what changed in the application.
 
 ## 1.2.0 - 2026-09-09
 
-Follows Mail Archiver 1.2.0. The
-[release notes](https://github.com/sphings79/mail-archiver/releases/tag/v1.2.0)
+Follows AmberChest 1.2.0. The
+[release notes](https://github.com/sphings79/amberchest/releases/tag/v1.2.0)
 have the whole story; the short version:
 
 - **OAuth for Gmail and Microsoft 365**, which no longer accept a password for
@@ -30,11 +30,11 @@ have the whole story; the short version:
 
 First release of the add-on.
 
-- Runs the published Mail Archiver image on Home Assistant OS, for `aarch64`
+- Runs the published AmberChest image on Home Assistant OS, for `aarch64`
   and `amd64`.
 - Ingress: the interface appears in the sidebar, without a login of its own.
 - Options for the master password, an optional interface password, a schedule,
   the attachment export and the archive folder.
 - Configuration in `/data/config`, archive in `/share/mail-archive`, so both
   survive an update and are part of a Home Assistant backup.
-- Follows [Mail Archiver 1.1.2](https://github.com/sphings79/mail-archiver/releases/tag/v1.1.2).
+- Follows [AmberChest 1.1.2](https://github.com/sphings79/amberchest/releases/tag/v1.1.2).

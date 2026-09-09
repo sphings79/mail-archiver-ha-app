@@ -1,14 +1,14 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="Mail Archiver as a Home Assistant add-on: the mail backup running on Home Assistant OS, in the sidebar through ingress" width="100%">
+  <img src="assets/banner.svg" alt="AmberChest as a Home Assistant add-on: the mail backup running on Home Assistant OS, in the sidebar through ingress" width="100%">
 
-  # Mail Archiver — IMAP Mail Backup Add-on for Home Assistant
+  # AmberChest — IMAP Mail Backup Add-on for Home Assistant
 
   **Back up your mailboxes to files you own, from inside Home Assistant.**
-  Add-on repository for [Mail Archiver — The Mail Backup Solution](https://github.com/sphings79/mail-archiver):
+  Add-on repository for [AmberChest — IMAP mail backup in plain .eml files](https://github.com/sphings79/amberchest):
   read only, incremental, nothing deleted on the server, nothing marked as read.
 
   [![Add-on](https://img.shields.io/badge/Home%20Assistant-Add--on-41BDF5?style=for-the-badge)](https://www.home-assistant.io/addons/)
-  [![Version](https://img.shields.io/badge/version-1.2.1-7C7CF5?style=for-the-badge)](https://github.com/sphings79/mail-archiver/releases)
+  [![Version](https://img.shields.io/badge/version-1.2.1-7C7CF5?style=for-the-badge)](https://github.com/sphings79/amberchest/releases)
   [![Architectures](https://img.shields.io/badge/arch-aarch64%20%7C%20amd64-3ddc97?style=for-the-badge)](#requirements)
   [![Licence](https://img.shields.io/badge/licence-AGPL--3.0-e0457b?style=for-the-badge)](LICENSE)
 
@@ -35,7 +35,7 @@
 
 ## What this add-on does
 
-Mail Archiver copies IMAP mailboxes to plain `.eml` files, one per message, in
+AmberChest copies IMAP mailboxes to plain `.eml` files, one per message, in
 the folder tree of the mailbox. It opens folders read only and fetches with
 `BODY.PEEK`, so nothing is deleted and nothing is marked as read. This add-on
 runs it on Home Assistant OS:
@@ -53,24 +53,24 @@ runs it on Home Assistant OS:
 
 | | What it is |
 | --- | --- |
-| [**Mail Archiver**](https://github.com/sphings79/mail-archiver) | The application itself: desktop app for macOS, Windows and Linux, plus the Docker container this add-on runs |
-| [**Mail Archiver Integration**](https://github.com/sphings79/mail-archiver-home-assistant) | Home Assistant integration from HACS: a device per mailbox, sensors, a backup button and a Lovelace card |
-| **Home Assistant App (Add-on)** (here) | This repository: Mail Archiver on Home Assistant OS, in the sidebar through ingress |
+| [**AmberChest**](https://github.com/sphings79/amberchest) | The application itself: desktop app for macOS, Windows and Linux, plus the Docker container this add-on runs |
+| [**AmberChest Integration**](https://github.com/sphings79/amberchest-home-assistant) | Home Assistant integration from HACS: a device per mailbox, sensors, a backup button and a Lovelace card |
+| **Home Assistant App (Add-on)** (here) | This repository: AmberChest on Home Assistant OS, in the sidebar through ingress |
 
 The add-on and the integration work well together: the add-on runs the
 instance, the integration turns it into entities.
 
 ## Installation
 
-<img src="assets/install.svg" alt="Four installation steps: open the add-on store, add this repository, install Mail Archiver and set a master password, start it" width="100%">
+<img src="assets/install.svg" alt="Four installation steps: open the add-on store, add this repository, install AmberChest and set a master password, start it" width="100%">
 
 1. **Settings → Add-ons → Add-on store → ⋮ → Repositories**
-2. Add `https://github.com/sphings79/mail-archiver-ha-app`
-3. Install **Mail Archiver**
+2. Add `https://github.com/sphings79/amberchest-ha-app`
+3. Install **AmberChest**
 4. Set a **master password** under *Configuration*
-5. Start it, then open **Mail Archiver** from the sidebar
+5. Start it, then open **AmberChest** from the sidebar
 
-[![Open your Home Assistant instance and show the add-on store with this repository pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsphings79%2Fmail-archiver-ha-app)
+[![Open your Home Assistant instance and show the add-on store with this repository pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsphings79%2Famberchest-ha-app)
 
 ## Configuration
 
@@ -107,7 +107,7 @@ mounted under `/media` and exclude it there.
 
 ## In the sidebar
 
-<img src="assets/sidebar.svg" alt="Home Assistant with Mail Archiver in the sidebar, showing the overview with message count and archive size" width="100%">
+<img src="assets/sidebar.svg" alt="Home Assistant with AmberChest in the sidebar, showing the overview with message count and archive size" width="100%">
 
 Ingress needs no open port: Home Assistant proxies the interface itself, and
 the add-on only answers that proxy.
@@ -115,7 +115,7 @@ the add-on only answers that proxy.
 ### Reaching it from outside
 
 Ingress is not an address other programs can talk to, so a browser on another
-machine — or the Mail Archiver desktop app moving an archive over — needs the
+machine — or the AmberChest desktop app moving an archive over — needs the
 port. Two settings on the **Configuration** tab:
 
 1. Set `ui_password` under *Options*, the login the interface then asks for
@@ -134,7 +134,7 @@ name does not resolve.
 
 ## How updates work
 
-The add-on is a pointer at the Mail Archiver image, so an update is a version
+The add-on is a pointer at the AmberChest image, so an update is a version
 number and nothing else. A workflow here checks hourly whether the application
 has a newer release, makes sure the matching image is really published, and
 writes the version into the add-on. Home Assistant then offers the update as
@@ -143,7 +143,7 @@ usual.
 It pulls rather than being pushed to: a workflow token is only valid for its
 own repository, so pushing from the application repository would need a
 personal access token, and this needs no secret at all. To fetch a version
-straight away, run **Follow Mail Archiver** under *Actions*.
+straight away, run **Follow AmberChest** under *Actions*.
 
 > GitHub switches scheduled workflows off after 60 days without any commit in a
 > repository. If nothing happened here for two months, run it once by hand.
@@ -153,7 +153,7 @@ straight away, run **Follow Mail Archiver** under *Actions*.
 The interface is one thing, entities are another. Two ways, and they can run
 side by side:
 
-| | [Integration](https://github.com/sphings79/mail-archiver-home-assistant) | MQTT |
+| | [Integration](https://github.com/sphings79/amberchest-home-assistant) | MQTT |
 | --- | --- | --- |
 | Installed through | HACS | nothing, it is built in |
 | Needs an open port | yes, plus `ui_password` | no |
@@ -167,7 +167,7 @@ archive size, last backup, a running flag and a backup button.
 ## Requirements
 
 - Home Assistant OS or Supervised — add-ons do not exist on Container or Core.
-  There, run the [Docker image](https://github.com/sphings79/mail-archiver#docker)
+  There, run the [Docker image](https://github.com/sphings79/amberchest#docker)
   directly.
 - `aarch64` or `amd64`. There is no 32-bit build.
 - Room for the archive: roughly what the mailbox occupies on the server.
@@ -194,7 +194,7 @@ it under `/media` on a network share and exclude that.
 No. Folders are opened read only and messages are fetched with `BODY.PEEK`, so
 even the "read" flag stays as it was. Deleting is not implemented at all.
 
-### Can I read the archived mail without Mail Archiver?
+### Can I read the archived mail without AmberChest?
 
 Yes. Every message is a plain `.eml` file that Thunderbird, Apple Mail and
 Outlook open directly. The folder tree on disk mirrors the mailbox.
@@ -206,19 +206,19 @@ a 20 GB archive.
 
 ### Where do updates come from?
 
-The add-on runs the published Mail Archiver image. A new version means a new
+The add-on runs the published AmberChest image. A new version means a new
 release there and a version bump here — the usual add-on update button.
 
 ### Is there a version for Home Assistant Container?
 
 Add-ons only exist on Home Assistant OS and Supervised. On Container, run the
 same image with `docker compose`; the
-[main repository](https://github.com/sphings79/mail-archiver#docker) has the
+[main repository](https://github.com/sphings79/amberchest#docker) has the
 file.
 
 ## Credits
 
-[Mail Archiver — The Mail Backup Solution](https://github.com/sphings79/mail-archiver)
+[AmberChest — IMAP mail backup in plain .eml files](https://github.com/sphings79/amberchest)
 by [sphings79](https://github.com/sphings79). This repository packages that
 image as an add-on; the application itself lives there.
 
@@ -231,7 +231,7 @@ Home Foundation or the Home Assistant project.
 
 ## Licence
 
-AGPL-3.0-or-later, the same as Mail Archiver itself — see [LICENSE](LICENSE).
+AGPL-3.0-or-later, the same as AmberChest itself — see [LICENSE](LICENSE).
 
 <sub>home assistant add-on · imap backup · email archive · mail backup home assistant ·
 eml archive · self hosted mail backup · home assistant os add-on · ingress add-on</sub>

@@ -1,6 +1,6 @@
-name: Follow Mail Archiver
+name: Follow AmberChest
 
-# Keeps the add-on pointed at the newest Mail Archiver release.
+# Keeps the add-on pointed at the newest AmberChest release.
 #
 # The check runs here rather than being pushed from the application repository:
 # a workflow's token is only valid for its own repository, so pushing from there
@@ -31,7 +31,7 @@ jobs:
         run: |
           wanted="${{ inputs.version }}"
           if [ -z "$wanted" ]; then
-            wanted=$(gh release view --repo sphings79/mail-archiver --json tagName -q .tagName | sed 's/^v//')
+            wanted=$(gh release view --repo sphings79/amberchest --json tagName -q .tagName | sed 's/^v//')
           fi
           current=$(python3 dev/bump.py --check "$wanted")
           echo "wanted=$wanted"   >> "$GITHUB_OUTPUT"
@@ -41,12 +41,12 @@ jobs:
       - name: Is that version really published as an image
         if: steps.target.outputs.wanted != steps.target.outputs.current
         run: |
-          token=$(curl -sf "https://ghcr.io/token?scope=repository%3Asphings79%2Fmail-archiver%3Apull&service=ghcr.io" \
+          token=$(curl -sf "https://ghcr.io/token?scope=repository%3Asphings79%2Famberchest%3Apull&service=ghcr.io" \
             | python3 -c "import sys,json;print(json.load(sys.stdin)['token'])")
           status=$(curl -s -o /dev/null -w '%{http_code}' \
             -H "Authorization: Bearer $token" \
             -H "Accept: application/vnd.oci.image.index.v1+json,application/vnd.docker.distribution.manifest.list.v2+json" \
-            "https://ghcr.io/v2/sphings79/mail-archiver/manifests/${{ steps.target.outputs.wanted }}")
+            "https://ghcr.io/v2/sphings79/amberchest/manifests/${{ steps.target.outputs.wanted }}")
           echo "Manifest request returned $status"
           # Without an image the add-on would install and then fail to start.
           test "$status" = "200"
@@ -55,7 +55,7 @@ jobs:
         if: steps.target.outputs.wanted != steps.target.outputs.current
         run: |
           python3 dev/bump.py "${{ steps.target.outputs.wanted }}" \
-            --notes-url "https://github.com/sphings79/mail-archiver/releases/tag/v${{ steps.target.outputs.wanted }}"
+            --notes-url "https://github.com/sphings79/amberchest/releases/tag/v${{ steps.target.outputs.wanted }}"
 
       # A push made with the workflow token starts no other workflow, so the
       # add-on configuration is checked here rather than by Validate.
@@ -63,12 +63,12 @@ jobs:
         if: steps.target.outputs.wanted != steps.target.outputs.current
         uses: frenck/action-addon-linter@v2
         with:
-          path: "./mail_archiver"
+          path: "./amberchest"
 
       - name: Commit
         if: steps.target.outputs.wanted != steps.target.outputs.current
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Follow Mail Archiver ${{ steps.target.outputs.wanted }}"
+          git commit -am "Follow AmberChest ${{ steps.target.outputs.wanted }}"
           git push

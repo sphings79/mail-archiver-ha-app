@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 446 160" width="446" height="160" role="img" aria-label="Mail Archiver">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 446 160" width="446" height="160" role="img" aria-label="AmberChest">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#41BDF5"/>
@@ -10,6 +10,6 @@
     <rect x="30" y="60" width="44" height="34" rx="7"/>
     <path d="M30 68l22 17 22-17"/>
   </g>
-  <text x="118" y="82" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#41BDF5">Mail Archiver</text>
+  <text x="118" y="82" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#41BDF5">AmberChest</text>
   <text x="118" y="112" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#7C7CF5">backup entities and a card</text>
 </svg>

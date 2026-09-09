@@ -2,7 +2,7 @@ configuration:
   master_password:
     name: Master password
     description: >-
-      Encrypts every mailbox password Mail Archiver stores. Choose one now and
+      Encrypts every mailbox password AmberChest stores. Choose one now and
       keep it: without it the configuration cannot be opened again.
   ui_password:
     name: Interface password

@@ -1,4 +1,4 @@
-"""Writes a new Mail Archiver version into every place that names one.
+"""Writes a new AmberChest version into every place that names one.
 
 The add-on is nothing but a pointer at a published image, so "updating" it
 means changing that version - here, in both READMEs, in the issue template and
@@ -15,9 +15,9 @@ from pathlib import Path
 import re
 import sys
 
-CONFIG = Path("mail_archiver/config.yaml")
+CONFIG = Path("amberchest/config.yaml")
 # Home Assistant reads the changelog from the add-on folder, not the root.
-CHANGELOG = Path("mail_archiver/CHANGELOG.md")
+CHANGELOG = Path("amberchest/CHANGELOG.md")
 BADGES = [Path("README.md"), Path("README.de.md")]
 TEMPLATE = Path(".github/ISSUE_TEMPLATE/bug_report.yml")
 
@@ -28,7 +28,7 @@ def current_version() -> str:
     """Read the version the add-on points at right now."""
     match = re.search(r'^version:\s*"([^"]+)"', CONFIG.read_text(), re.MULTILINE)
     if not match:
-        raise SystemExit("No version in mail_archiver/config.yaml")
+        raise SystemExit("No version in amberchest/config.yaml")
     return match.group(1)
 
 
@@ -46,10 +46,10 @@ def bump(version: str, notes_url: str | None) -> None:
 
     TEMPLATE.write_text(TEMPLATE.read_text().replace(f'placeholder: "{old}"', f'placeholder: "{version}"'))
 
-    link = notes_url or f"https://github.com/sphings79/mail-archiver/releases/tag/v{version}"
+    link = notes_url or f"https://github.com/sphings79/amberchest/releases/tag/v{version}"
     entry = (
         f"## {version} - {date.today().isoformat()}\n\n"
-        f"- Follows Mail Archiver {version}. See the\n"
+        f"- Follows AmberChest {version}. See the\n"
         f"  [release notes]({link}) for what changed in the application.\n\n"
     )
     text = CHANGELOG.read_text()
@@ -61,7 +61,7 @@ def bump(version: str, notes_url: str | None) -> None:
 def main() -> None:
     """Handle the command line."""
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("version", help="The Mail Archiver version to follow, without the v")
+    parser.add_argument("version", help="The AmberChest version to follow, without the v")
     parser.add_argument("--notes-url", default=None, help="Link to the release notes")
     parser.add_argument("--check", action="store_true", help="Only print the current version")
     args = parser.parse_args()

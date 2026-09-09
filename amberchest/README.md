@@ -1,4 +1,4 @@
-# Mail Archiver
+# AmberChest
 
 Backs up IMAP mailboxes to plain `.eml` files on your own storage - read only,
 incremental, with the folder tree preserved. Nothing on the server is deleted,
@@ -14,18 +14,18 @@ nothing is marked as read.
 
 Set a master password under *Configuration*, start the add-on, and open **Mail
 Archiver** from the sidebar. The [documentation](DOCS.md) has the details, and
-the [project page](https://github.com/sphings79/mail-archiver-ha-app) has the
+the [project page](https://github.com/sphings79/amberchest-ha-app) has the
 rest.
 
 ## Three projects, one archive
 
 | | What it is |
 | --- | --- |
-| [Mail Archiver](https://github.com/sphings79/mail-archiver) | The application: desktop app for macOS, Windows and Linux, plus the Docker container this add-on runs |
-| [Mail Archiver Integration](https://github.com/sphings79/mail-archiver-home-assistant) | Home Assistant integration from HACS: a device per mailbox, sensors, a backup button and a Lovelace card |
-| [Home Assistant App (Add-on)](https://github.com/sphings79/mail-archiver-ha-app) | This one: Mail Archiver on Home Assistant OS, in the sidebar through ingress |
+| [AmberChest](https://github.com/sphings79/amberchest) | The application: desktop app for macOS, Windows and Linux, plus the Docker container this add-on runs |
+| [AmberChest Integration](https://github.com/sphings79/amberchest-home-assistant) | Home Assistant integration from HACS: a device per mailbox, sensors, a backup button and a Lovelace card |
+| [Home Assistant App (Add-on)](https://github.com/sphings79/amberchest-ha-app) | This one: AmberChest on Home Assistant OS, in the sidebar through ingress |
 
 If it is useful to you: a ⭐ on
-[the add-on](https://github.com/sphings79/mail-archiver-ha-app) or
-[Mail Archiver](https://github.com/sphings79/mail-archiver) helps, and there is
+[the add-on](https://github.com/sphings79/amberchest-ha-app) or
+[AmberChest](https://github.com/sphings79/amberchest) helps, and there is
 a [coffee](https://buymeacoffee.com/sphings) button as well.

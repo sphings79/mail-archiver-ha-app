@@ -25,13 +25,13 @@
     <circle cx="668" cy="146" r="22" fill="url(#accent)"/>
     <text x="668" y="153" fill="#0f1720" font-size="18" font-weight="700" text-anchor="middle">3</text>
     <text x="648" y="206" fill="#e6edf3" font-size="17" font-weight="600">Install</text>
-    <text x="648" y="234" fill="#9fb0c0" font-size="13">Install Mail Archiver and set a</text>
+    <text x="648" y="234" fill="#9fb0c0" font-size="13">Install AmberChest and set a</text>
     <text x="648" y="254" fill="#9fb0c0" font-size="13">master password.</text>
     <rect x="906" y="100" width="258" height="200" rx="14" fill="#16202b" stroke="#28394a"/>
     <circle cx="950" cy="146" r="22" fill="url(#accent)"/>
     <text x="950" y="153" fill="#0f1720" font-size="18" font-weight="700" text-anchor="middle">4</text>
     <text x="930" y="206" fill="#e6edf3" font-size="17" font-weight="600">Start</text>
-    <text x="930" y="234" fill="#9fb0c0" font-size="13">Start it and open Mail Archiver</text>
+    <text x="930" y="234" fill="#9fb0c0" font-size="13">Start it and open AmberChest</text>
     <text x="930" y="254" fill="#9fb0c0" font-size="13">from the sidebar.</text>
   </g>
 </svg>
