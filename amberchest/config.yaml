@@ -1,5 +1,5 @@
 name: AmberChest
-version: "2.0.0"
+version: "2.1.0"
 slug: amberchest
 description: Back up IMAP mailboxes to plain .eml files you own - read only, incremental, nothing deleted on the server.
 url: https://github.com/sphings79/amberchest-ha-app
